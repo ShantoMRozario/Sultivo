@@ -39,6 +39,10 @@ img{
 ol,ul{
     list-style: none;
 }
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
 a{
     text-decoration: none;
     display: inline-block;
@@ -57,10 +61,8 @@ a{
     gap: 30px;
 }
 .dropdown-toggle::after {
-        display: none;
+    display: none;
     
-}
-#header .header_item_1 .language {
 }
 #header .header_item_1 .language button{
     all:unset;
@@ -173,7 +175,13 @@ a{
 #banner{
     padding: 80px 0;
 }
-#banner .banner_info{}
+#banner .banner_content {
+    position: relative;
+}
+#banner .banner_info_main{
+    z-index: 100;
+    margin: 90px 0;
+}
 #banner .banner_info h4{
     font-size: 14px;
     font-family: var(--Roboto_shantomrozario);
@@ -194,6 +202,8 @@ a{
     font-family: var(--Montserrat_shantomrozario);
     font-weight: var(--bold);
     color: var(--color_shantomrozario_blue_primary);
+    padding: 30px 0 ;
+    line-height: 0;
 }
 #banner .banner_info h2 span{
     color:var(--color_shantomrozario_button);
@@ -206,12 +216,13 @@ a{
     font-size: 20px;
     font-family: var(--Roboto_shantomrozario);
     color: var(--color_shantomrozario_blue_secondary);
+    padding: 30px 0 50px;
 }
 #banner .banner_form{
     position: relative;
 }
 #banner .banner_form input{
-    width: 590px;
+    width: 650px;
     height: 80px;
     background: #fff;
     border: 1px solid transparent;
@@ -219,6 +230,14 @@ a{
     padding:30px 0 ;
     padding-left: 40px;
     box-shadow: 0 20px 25px 0px #d8d8d8;
+    color:var(--color_shantomrozario_blue_primary);
+}
+#banner .banner_form input::placeholder{
+    color: #9eaab6;
+    text-transform: capitalize;
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--regular);
+    font-size: 16px;
 }
 #banner .banner_form button{
     all: unset;
@@ -233,11 +252,128 @@ a{
     border-radius: 40px;
     margin: -275px;
 }
-#banner .banner_form{}
+
+#banner .banner_content .banner_image img {
+    width: 748px;
+    height: 590px;
+    position: relative;
+    z-index: -1;
+}
+#banner .banner_content .banner_image {
+    position: absolute;
+    top: 0;
+    right: -30%;
+    transform: translateX(-50%);
+    z-index: -1;
+    
+}
+#banner .banner_content .banner_image::after {
+	position: absolute;
+	content: '';
+	bottom: -100px;
+	right: -100px;
+	border-left: 410px solid transparent;
+	border-top: 335px solid transparent;
+	border-right: 209px solid #f9f9f9;
+	border-bottom: 420px solid #f9f9f9;
+	z-index: -20;
+}
+#banner .banner_image .overlay {
+    background: rgba(59, 59, 59, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
 /* Banner End Here */
 
-/* Navbar Start Here */
-/* Navbar End Here */
+/* About Start Here */
+#about{
+    background: var(--color_shantomrozario_blue_primary);
+
+}
+#about .about_left_info {
+    padding: 118px 0 0;
+}
+#about .about_left_info .about_text h3{
+    color: #fff;
+    font-weight: var(--bold);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: var(--Roboto_shantomrozario);
+}
+#about .about_left_info .about_text h2{
+    color: #fff;
+    font-weight: var(--bold);
+    font-size:60px;
+    font-family: var(--Montserrat_shantomrozario);
+    padding: 30px 0 75px;
+}
+#about .about_left_info .about_text h2 span{
+    font-weight: var(--thin);
+}
+#about .about_left_info .about_video{
+    background: #00284f;
+    width: 410px;
+    height: 142px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#about .about_left_info .about_video .text h3{
+    font-family:var(--Montserrat_shantomrozario);
+    font-size: 20px;
+    font-weight: var(--bold);
+    color: #fff;
+    text-transform: capitalize;
+}
+#about .about_left_info .about_video .icon a{
+    padding: 20px;
+    border-radius: 50%;
+    background: var(--color_shantomrozario_button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all linear .3s;
+}
+#about .about_left_info .about_video .icon a:hover{
+    box-shadow: 0px 0px 20px 1px var(--color_shantomrozario_button);
+}
+#about .about_left_info .about_video .icon a i{
+    color: #fff;
+    font-size: 20px;
+}
+#about .about_right_info {
+    padding: 120px 0 118px;
+}
+#about .about_right_info p{
+    font-family: var(--Roboto_shantomrozario);
+    color: var(--color_shantomrozario_ash_2);
+    font-size: 18px;
+    font-weight: var(--regular);
+    line-height: 30px;
+}
+#about .about_right_info h5{
+    font-family: var(--Roboto_shantomrozario);
+    color: var(--color_shantomrozario_ash_2);
+    font-size: 18px;
+    font-weight: var(--regular);
+    padding-top: 50px;
+}
+#about .about_right_info h5 span{
+    font-weight: var(--bold);
+}
+#about .about_right_info h3 a{
+    font-family: var(--Montserrat_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 40px;
+    color: #fff;
+    transition: all linear .3s;
+}
+#about .about_right_info h3 a:hover{
+    color: var(--color_shantomrozario_button);
+}
+/* About End Here */
 
 /* Navbar Start Here */
 /* Navbar End Here */
