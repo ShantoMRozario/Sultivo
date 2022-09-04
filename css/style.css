@@ -3,81 +3,126 @@
 /* Google Font End Here */
 
 /* Root Start Here */
-:root{
+:root {
     /* Font Family */
-    --Montserrat_shantomrozario:'Montserrat', sans-serif;
-    --Roboto_shantomrozario:'Roboto', sans-serif;
+    --Montserrat_shantomrozario: 'Montserrat', sans-serif;
+    --Roboto_shantomrozario: 'Roboto', sans-serif;
 
     /* Color */
-    --color_shantomrozario_button:#e74d58;
-    --color_shantomrozario_blue_primary:#002e5b;
-    --color_shantomrozario_blue_secondary:#5b7996;
-    --color_shantomrozario_ash_1:#9eaab6;
-    --color_shantomrozario_ash_2:#97abc2;
+    --color_shantomrozario_button: #e74d58;
+    --color_shantomrozario_blue_primary: #002e5b;
+    --color_shantomrozario_blue_secondary: #5b7996;
+    --color_shantomrozario_ash_1: #9eaab6;
+    --color_shantomrozario_ash_2: #97abc2;
 
     /* Font Weight */
-    --black:900;
-    --bold:700;
-    --semibold:600;
-    --medium:500;
-    --regular:400;
-    --light:300;
-    --thin:100;
+    --black: 900;
+    --bold: 700;
+    --semibold: 600;
+    --medium: 500;
+    --regular: 400;
+    --light: 300;
+    --thin: 100;
 
 }
+
 /* Root End Here */
 
 /* All Common CSS Start Here */
-*{
+* {
     margin: 0;
     padding: 0;
     outline: 0;
 }
-img{
+body{
+    overflow-x: hidden;
+}
+
+img {
     vertical-align: middle;
 }
-ol,ul{
+
+ol,
+ul {
     list-style: none;
 }
-h1,h2,h3,h4,h5,h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     padding: 0;
 }
-a{
+
+a {
     text-decoration: none;
     display: inline-block;
 }
+.no_after::after{
+    display: none;
+}
+.no_before::before{
+    display: none;
+}
+/* common heading start */
+.mini_head h3{
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 14px;
+    color: var(--color_shantomrozario_button);
+    text-transform: capitalize;
+    padding-bottom: 25px;
+}
+.big_text h2{
+    font-family: var(--Montserrat_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 60px;
+    color: var(--color_shantomrozario_blue_primary);
+    text-transform: capitalize;
+}
+.big_text h2 span{
+    font-weight: var(--thin);
+}
+/* common heading end */
 
 /* All Common CSS End Here */
 
 
 /* Header Start Here */
-#header{
+#header {
     background: var(--color_shantomrozario_button);
 }
-#header .header_item_1{
+
+#header .header_item_1 {
     display: flex;
     align-items: center;
     gap: 30px;
 }
+
 .dropdown-toggle::after {
     display: none;
-    
-}
-#header .header_item_1 .language button{
-    all:unset;
-    cursor: pointer;
-    color: #fff;
-    font-size:16px ;
-    font-family:var(--Roboto_shantomrozario);
-    font-weight:var(--bold);
 
 }
-#header .header_item_1 .language .dropdown-menu{
+
+#header .header_item_1 .language button {
+    all: unset;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--bold);
+
+}
+
+#header .header_item_1 .language .dropdown-menu {
     padding: 10px;
 
 }
-#header .header_item_1 .language button svg{
+
+#header .header_item_1 .language button svg {
     color: #fff;
     width: 15px;
     height: 15px;
@@ -85,54 +130,63 @@ a{
     margin-top: -3px;
 
 }
-#header .header_item_1 .email{
+
+#header .header_item_1 .email {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     gap: 10px;
 }
-#header .header_item_1 .email .icon a{
+
+#header .header_item_1 .email .icon a {
     color: #fff;
 }
-#header .header_item_1 .email .text a{
+
+#header .header_item_1 .email .text a {
     color: #fff;
-    font-size:16px ;
-    font-family:var(--Roboto_shantomrozario);
-    font-weight:var(--bold);
+    font-size: 16px;
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--bold);
 }
-#header .header_item_2{
+
+#header .header_item_2 {
     display: flex;
     justify-content: end;
     align-items: center;
     gap: 30px;
 
 }
-#header .header_item_2 .icon i{
+
+#header .header_item_2 .icon i {
     color: #fff;
     font-size: 20px;
     margin: 0 8px;
 }
-#header .header_item_2 .head_btn a{
+
+#header .header_item_2 .head_btn a {
     text-transform: uppercase;
     color: #fff;
     font-size: 15px;
-    font-family:var(--Roboto_shantomrozario);
+    font-family: var(--Roboto_shantomrozario);
     font-weight: var(--bold);
     background: var(--color_shantomrozario_blue_primary);
     padding: 15px 35px;
-    
+
 }
+
 /* Header End Here */
 
 /* Navbar Start Here */
-#navbar{
+#navbar {
     padding: 40px 0;
     box-shadow: 0px 20px 10px 0px #f7f7f7;
 }
+
 #navbar ul {
-	margin-left: 130px;
+    margin-left: 130px;
 }
-#navbar ul li a{
+
+#navbar ul li a {
     text-transform: uppercase;
     color: var(--color_shantomrozario_blue_primary);
     font-size: 16px;
@@ -140,6 +194,7 @@ a{
     font-family: var(--Roboto_shantomrozario);
     margin: 0 25px;
 }
+
 #navbar ul li a svg {
     color: #cccccc;
     width: 15px;
@@ -147,102 +202,117 @@ a{
     font-weight: var(--thin);
     margin-top: -3px;
 }
-#navbar .call_btn{
+
+#navbar .call_btn {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
     gap: 10px;
 }
-#navbar .call_btn .text h4{
-    padding: 15px 0 5px;
+
+#navbar .call_btn .text h4 {
+    padding: 15px 0 10px;
     color: var(--color_shantomrozario_button);
     font-size: 24px;
     font-weight: var(--bold);
     font-family: var(--Roboto_shantomrozario);
     line-height: 0;
 }
-#navbar .call_btn .text span{
-    text-transform:capitalize;
+
+#navbar .call_btn .text span {
+    text-transform: capitalize;
     font-size: 16px;
     font-weight: var(--regular);
     color: var(--color_shantomrozario_ash_1);
 }
-    
+
 
 /* Navbar End Here */
 
 /* Banner Start Here */
-#banner{
+#banner {
     padding: 80px 0;
 }
+
 #banner .banner_content {
     position: relative;
 }
-#banner .banner_info_main{
+
+#banner .banner_info_main {
     z-index: 100;
     margin: 90px 0;
 }
-#banner .banner_info h4{
+
+#banner .banner_info h4 {
     font-size: 14px;
     font-family: var(--Roboto_shantomrozario);
     font-weight: var(--bold);
     color: #999999;
     word-spacing: 10px;
 }
-#banner .banner_info h1{
+
+#banner .banner_info h1 {
     text-transform: capitalize;
     font-size: 100px;
     font-family: var(--Montserrat_shantomrozario);
     font-weight: var(--bold);
     color: var(--color_shantomrozario_blue_primary);
 }
-#banner .banner_info h2{
+
+#banner .banner_info h2 {
     text-transform: capitalize;
     font-size: 72px;
     font-family: var(--Montserrat_shantomrozario);
     font-weight: var(--bold);
     color: var(--color_shantomrozario_blue_primary);
-    padding: 30px 0 ;
+    padding: 30px 0;
     line-height: 0;
+    text-shadow: 5px 2px 2px #fff;
 }
-#banner .banner_info h2 span{
-    color:var(--color_shantomrozario_button);
+
+#banner .banner_info h2 span {
+    color: var(--color_shantomrozario_button);
     font-weight: var(--regular);
 
 }
-#banner .banner_info p{
-    text-transform:capitalize;
+
+#banner .banner_info p {
+    text-transform: capitalize;
     font-weight: var(--regular);
     font-size: 20px;
     font-family: var(--Roboto_shantomrozario);
     color: var(--color_shantomrozario_blue_secondary);
     padding: 30px 0 50px;
 }
-#banner .banner_form{
+
+#banner .banner_form {
     position: relative;
 }
-#banner .banner_form input{
-    width: 650px;
+
+#banner .banner_form input {
+    width: 640px;
     height: 80px;
     background: #fff;
     border: 1px solid transparent;
     border-radius: 40px;
-    padding:30px 0 ;
+    padding: 30px 0;
     padding-left: 40px;
     box-shadow: 0 20px 25px 0px #d8d8d8;
-    color:var(--color_shantomrozario_blue_primary);
+    color: var(--color_shantomrozario_blue_primary);
 }
-#banner .banner_form input::placeholder{
+
+#banner .banner_form input::placeholder {
     color: #9eaab6;
     text-transform: capitalize;
     font-family: var(--Roboto_shantomrozario);
     font-weight: var(--regular);
     font-size: 16px;
 }
-#banner .banner_form button{
+
+#banner .banner_form button {
     all: unset;
     cursor: pointer;
-    background:var(--color_shantomrozario_button);
+    background: var(--color_shantomrozario_button);
     color: #fff;
     font-size: 16px;
     font-family: var(--Roboto_shantomrozario);
@@ -250,7 +320,7 @@ a{
     text-transform: uppercase;
     padding: 20px 60px;
     border-radius: 40px;
-    margin: -275px;
+    margin-left: -275px;
 }
 
 #banner .banner_content .banner_image img {
@@ -259,59 +329,68 @@ a{
     position: relative;
     z-index: -1;
 }
+
 #banner .banner_content .banner_image {
     position: absolute;
     top: 0;
     right: -30%;
     transform: translateX(-50%);
     z-index: -1;
-    
+
 }
+
 #banner .banner_content .banner_image::after {
-	position: absolute;
-	content: '';
-	bottom: -100px;
-	right: -100px;
-	border-left: 410px solid transparent;
-	border-top: 335px solid transparent;
-	border-right: 209px solid #f9f9f9;
-	border-bottom: 420px solid #f9f9f9;
-	z-index: -20;
+    position: absolute;
+    content: '';
+    bottom: -100px;
+    right: -100px;
+    border-left: 410px solid transparent;
+    border-top: 335px solid transparent;
+    border-right: 209px solid #f9f9f9;
+    border-bottom: 420px solid #f9f9f9;
+    z-index: -20;
 }
+
 #banner .banner_image .overlay {
-    background: rgba(59, 59, 59, 0.5);
+    background: rgba(189, 189, 189, 0.5);
     width: 100%;
     height: 100%;
     z-index: 10;
 }
+
 /* Banner End Here */
 
 /* About Start Here */
-#about{
+#about {
     background: var(--color_shantomrozario_blue_primary);
 
 }
+
 #about .about_left_info {
     padding: 118px 0 0;
 }
-#about .about_left_info .about_text h3{
+
+#about .about_left_info .about_text h3 {
     color: #fff;
     font-weight: var(--bold);
     font-size: 14px;
     text-transform: uppercase;
     font-family: var(--Roboto_shantomrozario);
 }
-#about .about_left_info .about_text h2{
+
+#about .about_left_info .about_text h2 {
     color: #fff;
     font-weight: var(--bold);
-    font-size:60px;
+    font-size: 60px;
     font-family: var(--Montserrat_shantomrozario);
     padding: 30px 0 75px;
 }
-#about .about_left_info .about_text h2 span{
+
+#about .about_left_info .about_text h2 span {
     font-weight: var(--thin);
 }
-#about .about_left_info .about_video{
+
+#about .about_left_info .about_video {
     background: #00284f;
     width: 410px;
     height: 142px;
@@ -319,15 +398,18 @@ a{
     justify-content: space-evenly;
     align-items: center;
 }
-#about .about_left_info .about_video .text h3{
-    font-family:var(--Montserrat_shantomrozario);
+
+#about .about_left_info .about_video .text h3 {
+    font-family: var(--Montserrat_shantomrozario);
     font-size: 20px;
     font-weight: var(--bold);
     color: #fff;
     text-transform: capitalize;
 }
-#about .about_left_info .about_video .icon a{
-    padding: 20px;
+
+#about .about_left_info .about_video .icon {
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     background: var(--color_shantomrozario_button);
     display: flex;
@@ -336,63 +418,840 @@ a{
     cursor: pointer;
     transition: all linear .3s;
 }
-#about .about_left_info .about_video .icon a:hover{
+
+#about .about_left_info .about_video .icon:hover {
     box-shadow: 0px 0px 20px 1px var(--color_shantomrozario_button);
 }
-#about .about_left_info .about_video .icon a i{
+
+#about .about_left_info .about_video .icon a i {
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
 }
+
 #about .about_right_info {
     padding: 120px 0 118px;
 }
-#about .about_right_info p{
+
+#about .about_right_info p {
     font-family: var(--Roboto_shantomrozario);
     color: var(--color_shantomrozario_ash_2);
     font-size: 18px;
     font-weight: var(--regular);
     line-height: 30px;
 }
-#about .about_right_info h5{
+
+#about .about_right_info h5 {
     font-family: var(--Roboto_shantomrozario);
     color: var(--color_shantomrozario_ash_2);
     font-size: 18px;
     font-weight: var(--regular);
     padding-top: 50px;
 }
-#about .about_right_info h5 span{
+
+#about .about_right_info h5 span {
     font-weight: var(--bold);
 }
-#about .about_right_info h3 a{
+
+#about .about_right_info h3 a {
     font-family: var(--Montserrat_shantomrozario);
     font-weight: var(--bold);
     font-size: 40px;
     color: #fff;
     transition: all linear .3s;
 }
-#about .about_right_info h3 a:hover{
+
+#about .about_right_info h3 a:hover {
     color: var(--color_shantomrozario_button);
 }
+
 /* About End Here */
 
-/* Navbar Start Here */
-/* Navbar End Here */
+/* Service Start Here */
+#service {
+    padding: 120px 0;
+    position: relative;
+}
+
+#service::after {
+    position: absolute;
+    content: '';
+    width: 39.5%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #f3f3f3;
+    z-index: -1;
+
+}
+
+#service .service_main {
+	padding: 60px 120px;
+	background: #fff;
+	box-shadow: 0px 25px 20px 5px #f7f7f7;
+}
+
+#service .service_main .item {
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#service .service_main .item .logo {
+    padding: 0 20px;
+    padding-top: 5px;
+}
+
+#service .service_main .item .logo .text h2 {
+    font-family: var(--Montserrat_shantomrozario);
+    font-size: 45px;
+    font-weight: var(--thin);
+    color: #afafaf;
+    padding-top: 5px;
+}
+
+#service .service_main .item .info h2 {
+    font-family: var(--Montserrat_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 22px;
+    color: var(--color_shantomrozario_blue_primary);
+    text-transform: capitalize;
+}
+
+#service .service_main .item .info p {
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--regular);
+    font-size: 16px;
+    color: #777777;
+    padding-top: 15px;
+}
+
+/* Service End Here */
+
+/* Counter Start Here */
+#counter .counter_bg{
+    background: var(--color_shantomrozario_blue_primary);
+}
+#counter .counter_bg .item{
+    padding: 60px 70px;
+}
+#counter .counter_bg .item .number h2{
+    display: inline-block;
+    font-family: var(--Montserrat_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 48px;
+    color: #fff;
+    position: relative;
+
+}
+#counter .counter_bg .item .number h2::after{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    top: 25%;
+    left: -30%;
+    transform: translateX(50%,-50%);
+    background: url(../images/counter-decoration.png) no-repeat;
+
+}
+#counter .counter_bg .item .number i{
+    font-size: 13px;
+    color: #fff;
+
+}
+#counter .counter_bg .item .text p{
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--medium);
+    font-size: 16px;
+    color: #728ca5;
+    text-transform: capitalize;
+    margin-bottom: 0;
+
+}
+/* Counter End Here */
+
+/* Feature Start Here */
+#feature{
+    padding: 120px 0;
+}
+#feature .item{
+    cursor: pointer;
+    transition: all linear .3s;
+    margin-top: 60px;
+}
+#feature .item:hover .image img{
+    transform: scale(1.1);
+}
+#feature .item .image{
+    position: relative;
+    overflow: hidden;
+}
+#feature .item .image img{
+    transition: all linear .3s;
+}
+#feature .item .image::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+#feature .item .text{
+    padding-top: 30px;
+}
+#feature .item .text h3{
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--regular);
+    font-size: 14px;
+    color: #777777;
+    text-transform: capitalize;
+}
+#feature .item .text h2{
+    font-family: var(--Montserrat_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 30px;
+    color: var(--color_shantomrozario_blue_primary);
+    text-transform: capitalize;
+    padding: 20px 0;
+    border-bottom:1px solid #e1e1e1 ;
+}
+#feature .item .text h2 span{
+    font-weight: var(--thin);
+}
+#feature .item .text p{
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--regular);
+    font-size: 18px;
+    color: #777777;
+    padding-top: 23px;
+    padding-right: 70px;
+}
+/* Feature End Here */
+
+/* Support Start Here */
+#support{
+    
+    background: url(../images/get-support.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    padding: 140px 0;
+}
+#support::after{
+    position: absolute;
+    content: '';
+    background: linear-gradient(to right , rgba(0, 0, 0, 0.7) , rgba(255, 255, 255, 0.7));
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+#support .overlay .support_info h4{
+    font-family: var(--Roboto_shantomrozario);
+    font-size: 14px;
+    font-weight: var(--bold);
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+
+}
+#support .overlay .support_info h2{
+    font-family: var(--Montserrat_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 60px;
+    color: #fff;
+    padding-right: 70px;
+    
+}
+#support .overlay .support_info h2 span{
+    font-weight: var(--thin);
+
+}
+#support .overlay .support_info h3{
+    font-family: var(--Montserrat_shantomrozario);
+    font-weight: var(--thin);
+    font-size: 80px;
+    color: var(--color_shantomrozario_button);
+    padding: 20px 0 50px;
+}
+#support .overlay .support_btn a{
+    color: #fff;
+    font-size: 16px;
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    padding: 20px 60px;
+    border: 1px solid #777777;
+    border-radius: 40px;
+    transition: all linear .3s;
+}
+#support .overlay .support_btn a:hover{
+    background: var(--color_shantomrozario_button);
+    border: 1px solid transparent;
+}
+/* Support End Here */
+
+/* Team Start Here */
+#team{
+    padding: 120px 0;
+}
+#team .item{
+    cursor: pointer;
+    transition: all linear .3s;
+    margin-top: 60px;
+}
+#team .item:hover .image img{
+    transform: scale(1.1);
+}
+#team .item .image{
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+#team .item .image img{
+    transition: all linear .3s;
+    
+}
+#team .item .image::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+#team .item .text{
+    padding-top: 30px;
+    position: relative;
+}
+#team .item .text h3{
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 14px;
+    color: var(--color_shantomrozario_button);
+    text-transform: uppercase;
+}
+#team .item .text h2{
+    font-family: var(--Montserrat_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 24px;
+    color: var(--color_shantomrozario_blue_primary);
+    text-transform: capitalize;
+    padding: 20px 0;
+}
+#team .item .text h2 span{
+    font-weight: var(--thin);
+}
+#team .item .text p{
+    border-top:1px solid #e1e1e1 ;
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--regular);
+    font-size: 18px;
+    color: #777777;
+    padding-top: 23px;
+    padding-right: 50px;
+}
+#team .item .text .logos{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 50;
+}
+#team .item .text .logos i{
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    right: 10px;
+    width: 60px;
+    height: 60px;    
+    background: #fff;
+    color: #777777;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear .4s;
+
+}
+#team .item .text .logos i.i_p{
+    box-shadow: 0px 15px 10px 0px #d8d8d8;
+
+}
+#team .item .text .logos a i.i_p:hover{
+    background: var(--color_shantomrozario_button);
+    color: #fff;
+
+}
+#team .item .text .logos a i.i_facebookSmr:hover{
+    background: var(--color_shantomrozario_button);
+    color: #fff;
+}
+#team .item .text .logos a i.i_twittersmr:hover{
+    background: var(--color_shantomrozario_button);
+    color: #fff;
+}
+#team .item .text .logos a i.i_behacesmr:hover{
+    background: var(--color_shantomrozario_button);
+    color: #fff;
+}
+
+#team .item .text .logos:hover i.i_facebookSmr{
+    top: -195px;
+
+}
+#team .item .text .logos:hover i.i_twittersmr{
+    top: -130px;
+
+}
+#team .item .text .logos:hover i.i_behacesmr{
+    top: -65px;
+
+}
+
+/* Team End Here */
+
+/* Clients Start Here */
+#client{
+    background: var(--color_shantomrozario_blue_primary);
+    padding: 110px 0;
+}
+/* Clients End Here */
+
+/* Portfolio Start Here */
+#portfolio{
+    padding: 120px 0;
+    position: relative;
+}
+#portfolio .portfolio_bg{
+    position: relative;
+    margin-top: 70px;
+    
+}
+#portfolio .portfolio_bg::before{
+    position: absolute;
+    content: '';
+    width: 310px;
+    height: 100%;
+    top: 0;
+    right: -11%;
+    transform: translateX(50%);
+    background: #f2f2f2;
+}
+#portfolio .portfolio_bg::after{
+    position: absolute;
+    content: '';
+    width: 310px;
+    height: 100%;
+    top: 0;
+    left: -37%;
+    transform: translateX(50%);
+    background: #f2f2f2;
+
+
+}
+#portfolio .portfolio_left_slide{
+    padding-top: 90px;
+}
+#portfolio .portfolio_right_slide .image_port{
+    position: relative;
+}
+#portfolio .portfolio_right_slide .image_port::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.562);
+}
+#portfolio .portfolio_right_slide .image_port img{
+    height: 480px;
+    width: 770px;
+}
+#portfolio .portfolio_left_slide .item .text h3{
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 14px;
+    color: var(--color_shantomrozario_button);
+    text-transform: capitalize;
+    
+}
+#portfolio .portfolio_left_slide .item .text a h2{
+    font-family: var(--Montserrat_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 30px;
+    color: var(--color_shantomrozario_blue_primary);
+    text-transform: capitalize;
+    padding: 20px 0 30px;
+}
+#portfolio .portfolio_left_slide .item .text a h2 span{
+    font-weight: var(--thin);
+}
+#portfolio .portfolio_left_slide .item .text p{
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--regular);
+    font-size: 18px;
+    color: #777777;
+    border-top: 1px solid #afafaf ;
+    padding: 25px 0 40px;
+    padding-right: 60px;
+}
+.slide_btn ul{
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+.slide_btn ul li{
+    margin: 0 5px;
+    cursor: pointer;
+}
+.slide_btn ul li i{
+    color: var(--color_shantomrozario_blue_primary);
+    text-align: center;
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 50%;
+    transition: all linear .3s;
+    
+} 
+.slide_btn li:hover i{
+    color: #fff;
+    background: var(--color_shantomrozario_button);
+    
+}
+.slide_btn li i{
+    font-size: 20px;
+}
+#portfolio .portfolio_right_slide .image_btn{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+#portfolio .portfolio_right_slide .image_btn a{
+    color: #fff;
+    background: var(--color_shantomrozario_button);
+    padding: 20px 40px;
+    border-radius: 30px;
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 16px;
+    text-transform: capitalize;
+
+}
+#portfolio .portfolio_right_slide .image_btn a i{
+    color: #fff;
+    padding-left: 10px;
+
+}
+/* Portfolio End Here */
+
+
+/* Why Choose Start Here */
+#choose{
+    padding: 120px 0;
+    position: relative;
+}
+#choose::after{
+    position: absolute;
+    content: '';
+    width: 60.5%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #fafafa;
+    z-index: -1;
+}
+#choose .choose_image{
+    position: relative;
+}
+#choose .choose_image::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.582);
+}
+#choose .choose_info{
+    padding-top: 5px;
+}
+#choose .choose_info .item{
+    padding-top: 15px ;
+}
+#choose .choose_info .item .icon{
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    border: 8px solid #f2f2f2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#choose .choose_info .item .text{
+    padding-left: 10px;
+}
+#choose .choose_info .item .text h3{
+    font-family: var(--Montserrat_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 22px;
+    color: var(--color_shantomrozario_blue_primary);
+    text-transform: capitalize;
+}
+#choose .choose_info .item .text h3 span{
+    font-weight: var(--thin);
+}
+#choose .choose_info .item .text p{
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--regular);
+    font-size: 15px;
+    color: #777777;
+    padding-top: 20px;
+
+}
+/* Why Choose End Here */
+
+/* Newsletter Start Here */
+#newsletter{
+    padding: 0 0 120px;
+}
+#newsletter .news_bg{
+    background: var(--color_shantomrozario_blue_primary);
+}
+#newsletter .subscribe{
+    padding: 80px 70px;
+    position: relative;
+    z-index: 1;
+}
+#newsletter .subscribe .mini_head h3{
+    text-transform: uppercase;
+}
+#newsletter .subscribe .big_text h2{
+    color: #fff;
+    z-index: 10;
+}
+#newsletter .subscribe .icon{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: -1;
+}
+#newsletter .news_contact {
+    padding-top: 40px;
+}
+
+#newsletter .news_contact input {
+    width: 500px;
+    height: 60px;
+    background: #073765;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    padding: 20px 0;
+    padding-left: 40px;
+    color: #fff;
+}
+
+#newsletter .news_contact input::placeholder {
+    color: #9eaab6;
+    text-transform: capitalize;
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--regular);
+    font-size: 16px;
+}
+
+#newsletter .news_contact button {
+    all: unset;
+    cursor: pointer;
+    background: var(--color_shantomrozario_button);
+    color: #fff;
+    font-size: 16px;
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    padding: 18px 40px;
+    border-radius: 40px;
+    margin-left: -180px;
+}
+#newsletter .news_contact button i {
+    color: #fff;
+    padding: 0 5px;
+}
+#newsletter .image{
+    position: relative;
+}
+#newsletter .image::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+/* Newsletter End Here */
+
+/* Footer Start Here */
+#footer{
+    background:var(--color_shantomrozario_blue_primary);
+    padding: 100px 0;
+}
+#footer .footer_1 .text p {
+    font-family: var(--Roboto_shantomrozario);
+    font-size: 15px;
+    font-weight: var(--regular);
+    color: var(--color_shantomrozario_ash_2);
+    padding: 20px 0;
+    padding-right: 70px;
+
+}
+#footer .footer_1 .call_btn{
+    display: flex;
+    align-items: center;
+}
+#footer .footer_1 .call_btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#footer .footer_1 .call_btn .text h4 {
+    padding: 15px 0 10px;
+    color: var(--color_shantomrozario_button);
+    font-size: 24px;
+    font-weight: var(--bold);
+    font-family: var(--Roboto_shantomrozario);
+    line-height: 0;
+}
+
+#footer .footer_1 .call_btn .text span {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: var(--regular);
+    color: var(--color_shantomrozario_ash_1);
+}
+
+#footer .footer_links .head h3{
+    color: #fff;
+    font-family: var(--Montserrat_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 20px;
+    text-transform: capitalize;
+}
+#footer .footer_links .info ul {
+    padding: 2px;
+    padding-top: 10px;
+    
+}
+#footer .footer_links .info ul li {
+    padding-top: 10px;
+}
+#footer .footer_links .info ul li a {
+    color: var(--color_shantomrozario_ash_2);
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--regular);
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+#footer .footer_address{
+    padding-left: 80px;
+}
+#footer .footer_address .head h3{
+    color: #fff;
+    font-family: var(--Montserrat_shantomrozario);
+    font-weight: var(--bold);
+    font-size: 20px;
+    text-transform: capitalize;
+}
+#footer .footer_address .add_info {
+    padding: 10px 0;
+}
+#footer .footer_address .add_info .item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 0;
+}
+
+#footer .footer_address .add_info .item .text a {
+    color: var(--color_shantomrozario_ash_1);
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--medium);
+    font-size: 15px;
+    text-transform: capitalize;
+    margin: 0;
+    padding-top: 5px;
+}
+
+#footer .footer_address .social_link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#footer .footer_address .social_link a{
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid #97abc234;
+    background: transparent;
+    transition: all linear .3s;
+}
+#footer .footer_address .social_link a i{
+    transition: all linear .3s;
+    color: rgba(167, 167, 167, 0.678);
+    font-size: 13px;
+}
+#footer .footer_address .social_link a:hover{
+
+    background: #17519d;
+    border: 2px solid transparent;
+}
+#footer .footer_address .social_link a:hover i{
+
+    color: #fff;
+}
+/* Footer End Here */
+
+/* Copyright Start Here */
+#copyright{
+    background: #00264c;
+    padding: 30px 0 10px;
+}
+#copyright .copy_left p{
+    font-family: var(--Roboto_shantomrozario);
+    font-weight: var(--regular);
+    font-size: 16px;
+    color: var(--color_shantomrozario_ash_2);
+    text-transform: capitalize;
+}
+#copyright .copy_left p span{
+    font-weight: var(--bold);
+    color: #fff;
+}
+#copyright .copy_right span{
+    font-family: var(--Roboto_shantomrozario);
+    font-size: 16px;
+    font-weight: var(--medium);
+    color: var(--color_shantomrozario_ash_2);
+}
+#copyright .copy_right span a{
+    color: var(--color_shantomrozario_ash_2);
+    padding: 0 20px;
+}
+/* Copyright End Here */
 
 /* Navbar Start Here */
 /* Navbar End Here */
 
-/* Navbar Start Here */
-/* Navbar End Here */
-
-/* Navbar Start Here */
-/* Navbar End Here */
-
-/* Navbar Start Here */
-/* Navbar End Here */
-
-/* Navbar Start Here */
-/* Navbar End Here */
-
-/* Navbar Start Here */
-/* Navbar End Here */
 
