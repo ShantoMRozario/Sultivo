@@ -192,16 +192,6 @@
 #service .service_main .item .info p {
 	font-size: 15px;
 }
-#service::after {
-	position: absolute;
-	content: '';
-	width: 33%;
-	height: 100%;
-	top: 0;
-	right: 2px;
-	background: #f3f3f3;
-	z-index: -1;
-}
 
 /* Counter */
 #counter .counter_bg .item {
@@ -240,6 +230,7 @@
 #support {
 	padding: 30px 0;
 }
+
 #support .overlay .support_info h2 {
 	font-size: 30px;
 	padding-right: 0px;
