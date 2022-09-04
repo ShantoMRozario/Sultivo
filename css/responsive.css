@@ -13,6 +13,12 @@
 }
 
  /* Header */
+ #header .header_item_1 {
+	justify-content: center;
+}
+ #header .header_item_2 {
+	justify-content: center;
+}
  #header .header_item_2 .head_btn a {
 	font-size: 13px;
 	padding: 10px 15px;
@@ -97,6 +103,9 @@
 /* Banner */
 #banner {
 	padding: 30px 0;
+}
+#banner .banner_content .banner_image::after {
+	display: none;
 }
 #banner .banner_info h4 {
 	font-size: 13px;
